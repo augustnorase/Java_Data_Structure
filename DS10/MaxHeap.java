@@ -86,7 +86,8 @@ public class MaxHeap implements Heap {
             max = right;
         }
 
-        if(max != index){   // max와 index가 일치할 경우는 세지 않습니다
+        if(max != index){   // max와 index가 일치할 경우는 세지 말 것
+            // 가장 큰 값이 index라는 것을 의미
             swap(heap, index, max); // 스왑시킬 것. 부모와 자식을 스왑시킨다고 생각하면 됩니다
             heapify(max);   // 재귀 방식으로 실현할 것. 이진트리 형식으로 구성되어 여러 트리를 처리해야 하기 때문에...
 
